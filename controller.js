@@ -7,7 +7,7 @@ const connection = require('./koneksi');
 
 module.exports = {
     getAllData: function (req, res) {
-        connection.query('SELECT * FROM nama_tabel', function (error, rows, fields) {
+        connection.query('SELECT * FROM mahasiswa', function (error, rows, fields) {
             if (error) {
                 console.error('Error querying database:', error);
                 response.ok('Error querying database', res);
