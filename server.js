@@ -1,4 +1,3 @@
- 
 // File: server.js
 
 'use strict';
@@ -16,7 +15,7 @@ app.use(bodyParser.json());
 const router = require('./router');
 router(app);
 
-// Handle 404 - Not Found
+// Handle 404 - Not Found untuk rute yang tidak ditangani oleh router
 app.use((req, res) => {
     res.status(404).send('404 - Not Found');
 });
@@ -25,6 +24,11 @@ app.use((req, res) => {
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('500 - Internal Server Error');
+});
+
+// Handle rute utama (/)
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
 });
 
 // Start the server
