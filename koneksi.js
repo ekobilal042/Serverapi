@@ -7,9 +7,9 @@ const mysql = require('mysql');
 // Konfigurasi koneksi ke database MySQL
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'username', // Ganti dengan username Anda
-    password: 'password', // Ganti dengan password Anda
-    database: 'nama_database' // Ganti dengan nama database Anda
+    user: 'root', // Ganti dengan username Anda
+    password: '', // Ganti dengan password Anda
+    database: 'dbrestapi' // Ganti dengan nama database Anda
 });
 
 // Membuka koneksi ke database
